@@ -1,37 +1,43 @@
 import React from "react";
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
-import installNode from "../assets/portfolio/installNode.jpg";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
+
+import tec from "../assets/portfolio/tecDeMonterrey.jpg";
+import kiara from "../assets/portfolio/kiara.jpg";
+import atemporal from "../assets/portfolio/atemporal.jpg";
+import zebrands from "../assets/portfolio/zebrands.jpg";
+import traffic from "../assets/portfolio/traffic.jpg";
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: arrayDestruct,
+      src: tec,
+      desc: "Portfolio made up of works to several courses within my university period",
+      link: "https://miscompetenciastec21.tec.mx/elumen/portfolio/WmD7kEcgavceX9Qa"
     },
     {
       id: 2,
-      src: reactParallax,
+      src: kiara,
+      desc: "Web application developed in Genesis Solutions for Kiara Real Estate",
+      link: "https://github.com/Genesis-Solutions/Kiara-Bienes-Raices"
     },
     {
       id: 3,
-      src: navbar,
+      src: atemporal,
+      desc: "Mobile application for Android developed for event management in Atemporal",
+      link: "https://github.com/ATG-5222/AppAtemporal/tree/develop"
     },
     {
       id: 4,
-      src: reactSmooth,
+      src: zebrands,
+      desc: "Web application for the management of support tickets within Zebrands",
+      link: "https://github.com/ATG-5222/Proyecto_Tickets"
     },
     {
       id: 5,
-      src: installNode,
-    },
-    {
-      id: 6,
-      src: reactWeather,
-    },
+      src: traffic,
+      desc: "Traffic simulation on a highway using mesa and other python tools",
+      link: "https://github.com/ATG-5222/TC2008B_Project"
+    }
   ];
 
   return (
@@ -48,7 +54,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src, desc, link }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
@@ -59,9 +65,13 @@ const Portfolio = () => {
                 <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Demo
                 </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Code
-                </button>
+                <a 
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                  Code/Files
+                </a>
               </div>
             </div>
           ))}
