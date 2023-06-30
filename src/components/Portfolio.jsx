@@ -86,13 +86,14 @@ const Portfolio = () => {
         <Modal
           isOpen={selectedModal !== null}
           onRequestClose={() => setSelectedModal(null)}
+          className="bg-black p-4 sm:p-6 md:p-8 max-w-xl mx-auto mt-20"
+          overlayClassName="fixed inset-0 bg-opacity-75 bg-black flex items-center justify-center"
         >
           {selectedModal !== null && (
             <div>
-              <p>Modal contenido para el elemento {selectedModal}</p>
-              {/* Aquí puedes mostrar el contenido del modal dependiendo del elemento seleccionado */}
-              {/* Por ejemplo, puedes acceder a los datos del elemento seleccionado utilizando `portfolios[selectedModal - 1]` */}
-              {/* <p>{portfolios[selectedModal - 1].desc}</p> */}
+              <div className="bg-gray-800 p-4 sm:p-6 md:p-8">
+                <p className="text-white text-lg mb-4">Modal contenido para el elemento {selectedModal}</p>
+              </div>
             </div>
           )}
         </Modal>
