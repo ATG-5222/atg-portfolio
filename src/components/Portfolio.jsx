@@ -16,32 +16,37 @@ const Portfolio = () => {
     {
       id: 1,
       src: tec,
-      desc: "Portfolio made up of works to several courses within my university period",
-      link: "https://miscompetenciastec21.tec.mx/elumen/portfolio/WmD7kEcgavceX9Qa"
+      desc: "Portfolio made up of works to several courses within my university period.",
+      link: "https://miscompetenciastec21.tec.mx/elumen/portfolio/WmD7kEcgavceX9Qa",
+      contri: "All the projects contained in this section formed an important part of my training as a systems engineer, some were done completely by me while others were done as a team. All the jobs made my technical and suvian skills develop."
     },
     {
       id: 2,
       src: kiara,
-      desc: "Web application developed in Genesis Solutions for Kiara Real Estate",
-      link: "https://github.com/Genesis-Solutions/Kiara-Bienes-Raices"
+      desc: "Web application developed in Genesis Solutions for Kiara Real Estate.",
+      link: "https://github.com/Genesis-Solutions/Kiara-Bienes-Raices",
+      contri: "I contributed mostly in the development of the Backend as well as in the deployment as part of the Dev-Ops team. Guaranteeing the correct operation of the application, always guaranteeing customer satisfaction, presents a great challenge with satisfactory results."
     },
     {
       id: 3,
       src: atemporal,
-      desc: "Mobile application for Android developed for event management in Atemporal",
-      link: "https://github.com/ATG-5222/AppAtemporal/tree/develop"
+      desc: "Mobile application for Android developed for event management in Atemporal.",
+      link: "https://github.com/ATG-5222/AppAtemporal/tree/develop",
+      contri: "I contributed mostly to the development of the Backend, focusing together with my team on generating a metrics module to have the necessary information to make the best possible decisions."
     },
     {
       id: 4,
       src: zebrands,
-      desc: "Web application for the management of support tickets within Zebrands",
-      link: "https://github.com/ATG-5222/Proyecto_Tickets"
+      desc: "Web application for the management of support tickets within Zebrands.",
+      link: "https://github.com/ATG-5222/Proyecto_Tickets",
+      contri: "I contributed mostly in the development of the Back-End, being my first web development project I focused on learning the necessary concepts to continue polishing my skills."
     },
     {
       id: 5,
       src: traffic,
-      desc: "Traffic simulation on a highway using mesa and other python tools",
-      link: "https://github.com/ATG-5222/TC2008B_Project"
+      desc: "Traffic simulation on a highway using mesa and other python tools.",
+      link: "https://github.com/ATG-5222/TC2008B_Project",
+      contri: "I contributed in the development of the simulation logic using python and elements such as mesa. Once these elements were in place, I focused on generating a server in python that would post the simulation elements to be able to use them in Unity."
     }
   ];
 
@@ -111,7 +116,7 @@ const Portfolio = () => {
                 <h2 className="text-white text-lg mb-4 text-center font-extrabold">
                   My contributions
                 </h2>
-                <p className="text-white text-lg mb-4">{selectedPortfolios.desc}</p>
+                <p className="text-white text-lg">{selectedPortfolios.contri}</p>
               </div>
             </div>
           )}
