@@ -10,6 +10,7 @@ import traffic from "../assets/portfolio/traffic.jpg";
 const Portfolio = () => {
 
   const [selectedModal, setSelectedModal] = useState(null);
+  const [selectedPortfolios, setSelectedPortfolios] = useState({});
 
   const portfolios = [
     {
@@ -44,6 +45,12 @@ const Portfolio = () => {
     }
   ];
 
+  const openModal = (id) => {
+    const selectedPortfolio = portfolios.find((portfolio) => portfolio.id === id);
+    setSelectedModal(id);
+    setSelectedPortfolios(selectedPortfolio);
+  };
+
   return (
     <div
       name="portfolio"
@@ -67,9 +74,9 @@ const Portfolio = () => {
               />
               <div className="flex items-center justify-center">
                 <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
-                onClick={() => setSelectedModal(id)}
+                onClick={() => openModal(id)}
                 >
-                  Demo
+                  Summary
                 </button>
                 <a 
                 href={link}
@@ -93,6 +100,8 @@ const Portfolio = () => {
             <div>
               <div className="bg-gray-800 p-4 sm:p-6 md:p-8">
                 <p className="text-white text-lg mb-4">Modal contenido para el elemento {selectedModal}</p>
+                <p className="text-white text-lg mb-4"> {selectedPortfolios.desc}</p>
+                <p className="text-white text-lg mb-4"> {selectedPortfolios.link}</p>
               </div>
             </div>
           )}
