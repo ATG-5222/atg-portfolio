@@ -97,12 +97,21 @@ const Portfolio = () => {
           overlayClassName="fixed inset-0 bg-opacity-75 bg-black flex items-center justify-center"
         >
           {selectedModal !== null && (
-            <div>
+            <div className="flex flex-col items-center">
+              <img
+                src={selectedPortfolios.src}
+                alt=""
+                className="rounded-full h-40 w-40 mb-4 duration-200 hover:scale-105"
+              />
               <div className="bg-gray-800 p-4 sm:p-6 md:p-8">
-                <h1 className="text-white text-lg mb-4 text-center font-extrabold"> What did the project consist of? </h1>
-                <p className="text-white text-lg mb-4"> {selectedPortfolios.desc}</p>
-                <h2 className="text-white text-lg mb-4 text-center font-extrabold"> My contributions </h2>
-                <p className="text-white text-lg mb-4"> {selectedPortfolios.desc}</p>
+                <h1 className="text-white text-lg mb-4 text-center font-extrabold">
+                  What did the project consist of?
+                </h1>
+                <p className="text-white text-lg mb-4">{selectedPortfolios.desc}</p>
+                <h2 className="text-white text-lg mb-4 text-center font-extrabold">
+                  My contributions
+                </h2>
+                <p className="text-white text-lg mb-4">{selectedPortfolios.desc}</p>
               </div>
             </div>
           )}
