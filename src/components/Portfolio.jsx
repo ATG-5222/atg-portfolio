@@ -99,9 +99,10 @@ const Portfolio = () => {
           {selectedModal !== null && (
             <div>
               <div className="bg-gray-800 p-4 sm:p-6 md:p-8">
-                <p className="text-white text-lg mb-4">Modal contenido para el elemento {selectedModal}</p>
+                <h1 className="text-white text-lg mb-4 text-center font-extrabold"> What did the project consist of? </h1>
                 <p className="text-white text-lg mb-4"> {selectedPortfolios.desc}</p>
-                <p className="text-white text-lg mb-4"> {selectedPortfolios.link}</p>
+                <h2 className="text-white text-lg mb-4 text-center font-extrabold"> My contributions </h2>
+                <p className="text-white text-lg mb-4"> {selectedPortfolios.desc}</p>
               </div>
             </div>
           )}
