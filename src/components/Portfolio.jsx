@@ -112,11 +112,11 @@ const Portfolio = () => {
                 <h1 className="text-white text-lg mb-4 text-center font-extrabold">
                   What did the project consist of?
                 </h1>
-                <p className="text-white text-lg mb-4">{selectedPortfolios.desc}</p>
+                <p className="text-white text-lg text-center mb-4">{selectedPortfolios.desc}</p>
                 <h2 className="text-white text-lg mb-4 text-center font-extrabold">
                   My contributions
                 </h2>
-                <p className="text-white text-lg">{selectedPortfolios.contri}</p>
+                <p className="text-white text-lg text-center">{selectedPortfolios.contri}</p>
               </div>
             </div>
           )}
