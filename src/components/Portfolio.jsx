@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "react-modal";
 
 import tec from "../assets/portfolio/tecDeMonterrey.jpg";
 import kiara from "../assets/portfolio/kiara.jpg";
@@ -7,6 +8,9 @@ import zebrands from "../assets/portfolio/zebrands.jpg";
 import traffic from "../assets/portfolio/traffic.jpg";
 
 const Portfolio = () => {
+
+  const [selectedModal, setSelectedModal] = useState(null);
+
   const portfolios = [
     {
       id: 1,
@@ -62,7 +66,9 @@ const Portfolio = () => {
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                onClick={() => setSelectedModal(id)}
+                >
                   Demo
                 </button>
                 <a 
@@ -76,6 +82,21 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
+
+        <Modal
+          isOpen={selectedModal !== null}
+          onRequestClose={() => setSelectedModal(null)}
+        >
+          {selectedModal !== null && (
+            <div>
+              <p>Modal contenido para el elemento {selectedModal}</p>
+              {/* Aquí puedes mostrar el contenido del modal dependiendo del elemento seleccionado */}
+              {/* Por ejemplo, puedes acceder a los datos del elemento seleccionado utilizando `portfolios[selectedModal - 1]` */}
+              {/* <p>{portfolios[selectedModal - 1].desc}</p> */}
+            </div>
+          )}
+        </Modal>
+
       </div>
     </div>
   );
