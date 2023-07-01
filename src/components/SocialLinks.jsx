@@ -33,17 +33,17 @@ const SocialLinks = () => {
       ),
       href: "A01275222@tec.mx",
     },
-    {
-      id: 4,
-      child: (
-        <>
-          Resume <BsFillPersonLinesFill size={30} />
-        </>
-      ),
-      href: "/resume.pdf",
-      style: "rounded-br-md",
-      download: true,
-    },
+    // {
+    //   id: 4,
+    //   child: (
+    //     <>
+    //       Resume <BsFillPersonLinesFill size={30} />
+    //     </>
+    //   ),
+    //   href: "/resume.pdf",
+    //   style: "rounded-br-md",
+    //   download: true,
+    // },
   ];
 
   return (
