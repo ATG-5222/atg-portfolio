@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 
 import tec from "../assets/portfolio/tecDeMonterrey.jpg";
-import kiara from "../assets/portfolio/kiara.jpg";
 import atemporal from "../assets/portfolio/atemporal.jpg";
 import zebrands from "../assets/portfolio/zebrands.jpg";
 import traffic from "../assets/portfolio/traffic.jpg";
+import kiara from "../assets/portfolio/kiara.png";
 
 const Portfolio = () => {
 

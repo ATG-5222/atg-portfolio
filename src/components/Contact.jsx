@@ -1,6 +1,9 @@
 import React from "react";
 
 const Contact = () => {
+
+  const endPoint = "https://getform.io/f/65ebca00-eb99-48b5-b4ed-af3ba8eb464d";
+
   return (
     <div
       name="contact"
@@ -16,7 +19,7 @@ const Contact = () => {
 
         <div className=" flex justify-center items-center">
           <form
-            action="https://getform.io/f/61c99527-2b15-42cf-9b55-ad37d2f7daa6"
+            action={endPoint}
             method="POST"
             className=" flex flex-col w-full md:w-1/2"
           >
