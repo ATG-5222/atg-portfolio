@@ -12,7 +12,7 @@ const SocialLinks = () => {
           LinkedIn <FaLinkedin size={30} />
         </>
       ),
-      href: "linkedin.com/in/aldo-tena-garcía-709133281",
+      href: "https://www.linkedin.com/in/aldo-tena-garcía-709133281/",
       style: "rounded-tr-md",
     },
     {
@@ -31,7 +31,7 @@ const SocialLinks = () => {
           Mail <HiOutlineMail size={30} />
         </>
       ),
-      href: "atg.00019@gmail.com",
+      href: "mailto:atg.00019@gmail.com",
     },
     // {
     //   id: 4,
