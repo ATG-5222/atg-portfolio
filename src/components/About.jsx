@@ -12,16 +12,12 @@ const About = () => {
             About
           </p>
         </div>
-
         <p className="text-xl mt-20">
-          I am currently studying computer science at Tecnológico de Monterrey and I am eager to learn as much as possible about the field. 
+        I am passionate about the world of technology, especially with the branch of networks and cybersecurity, with a dedicated approach to meeting the challenges in this constantly evolving field. 
         </p>
-
         <br />
-
         <p className="text-xl">
-          I am particularly interested in learning everything about the field of cybersecurity.
-          I am excited about the opportunity to work with other talented professionals and contribute to the development of innovative software solutions.
+        My goal is to apply my experience and enthusiasm for cybersecurity in a challenging work environment. I am committed to contributing to the success of any team I join, bringing creativity, diligence and a problem-solving approach.
         </p>
       </div>
     </div>
