@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 
-import tec from "../assets/portfolio/tecDeMonterrey.jpg";
+import genesis from "../assets/portfolio/genesis.png";
 import atemporal from "../assets/portfolio/atemporal.jpg";
 import zebrands from "../assets/portfolio/zebrands.jpg";
 import traffic from "../assets/portfolio/traffic.jpg";
 import kiara from "../assets/portfolio/kiara.png";
+import server from "../assets/portfolio/server.png";
 
 const Portfolio = () => {
 
@@ -15,39 +16,51 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: tec,
-      desc: "Portfolio made up of works to several courses within my university period.",
-      link: "https://miscompetenciastec21.tec.mx/elumen/portfolio/WmD7kEcgavceX9Qa",
-      contri: "All the projects contained in this section formed an important part of my training as a systems engineer, some were done completely by me while others were done as a team. All the jobs made my technical and suvian skills develop."
+      src: genesis,
+      hasLink: true,
+      desc: "Consolidation of a software development department.",
+      link: "https://andrewisabeast.notion.site/G-nesis-e66594d87d41464dacb036ab7322e908?pvs=4",
+      contri: "I participated as an active member in the software development department and promoted the adoption and accreditation of a CMMI 2 level with 7 process areas mainly through constant monitoring of the cost, time and resources invested to meet the objectives."
     },
     {
       id: 2,
       src: kiara,
+      hasLink: true,
       desc: "Web application developed in Genesis Solutions for Kiara Real Estate.",
       link: "https://github.com/Genesis-Solutions/Kiara-Bienes-Raices",
       contri: "I contributed mostly in the development of the Backend as well as in the deployment as part of the Dev-Ops team. Guaranteeing the correct operation of the application, always guaranteeing customer satisfaction, presents a great challenge with satisfactory results."
     },
     {
       id: 3,
+      src: server,
+      hasLink: false,
+      desc: "LAN network implementation with an Ubuntu server.",
+      contri: "I participated in the design, implementation, penetration testing and hardening of an enterprise LAN network with a Ubuntu server that provided services within the network such as DNS, DHCP and an Apache2 web server."
+    },
+    {
+      id: 4,
       src: atemporal,
+      hasLink: true,
       desc: "Mobile application for Android developed for event management in Atemporal.",
       link: "https://github.com/ATG-5222/AppAtemporal/tree/develop",
       contri: "I contributed mostly to the development of the Backend, focusing together with my team on generating a metrics module to have the necessary information to make the best possible decisions."
     },
     {
-      id: 4,
+      id: 5,
       src: zebrands,
+      hasLink: true,
       desc: "Web application for the management of support tickets within Zebrands.",
       link: "https://github.com/ATG-5222/Proyecto_Tickets",
       contri: "I contributed mostly in the development of the Back-End, being my first web development project I focused on learning the necessary concepts to continue polishing my skills."
     },
     {
-      id: 5,
+      id: 6,
       src: traffic,
+      hasLink: true,
       desc: "Traffic simulation on a highway using mesa and other python tools.",
       link: "https://github.com/ATG-5222/TC2008B_Project",
       contri: "I contributed in the development of the simulation logic using python and elements such as mesa. Once these elements were in place, I focused on generating a server in python that would post the simulation elements to be able to use them in Unity."
-    }
+    },
   ];
 
   const openModal = (id) => {
@@ -66,15 +79,15 @@ const Portfolio = () => {
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Portfolio
           </p>
-          <p className="py-6">Check out some of my work right here</p>
+          <p className="pt-6">Check out some of my work right here</p>
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src, desc, link }) => (
+          {portfolios.map(({ id, src, desc, hasLink, link }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
-                alt=""
+                alt={desc}
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
@@ -83,13 +96,15 @@ const Portfolio = () => {
                 >
                   Summary
                 </button>
-                <a 
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Code/Files
-                </a>
+                {hasLink === true &&
+                  <a 
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                    Code/Files
+                  </a>
+                }
               </div>
             </div>
           ))}
