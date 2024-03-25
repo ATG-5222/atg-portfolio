@@ -12,7 +12,7 @@ const SocialLinks = () => {
           LinkedIn <FaLinkedin size={30} />
         </>
       ),
-      href: "www.linkedin.com/in/aldo-tena-garcía",
+      href: "https://www.linkedin.com/in/aldo-tena-garc%C3%ADa/",
       style: "rounded-tr-md",
     },
     {
