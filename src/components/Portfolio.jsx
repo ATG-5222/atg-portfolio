@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 
 import genesis from "../assets/portfolio/genesis.png";
-import atemporal from "../assets/portfolio/atemporal.jpg";
+import imimex from "../assets/portfolio/imimex.jpeg";
 import zebrands from "../assets/portfolio/zebrands.jpg";
 import traffic from "../assets/portfolio/traffic.jpg";
 import kiara from "../assets/portfolio/kiara.png";
@@ -39,11 +39,10 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      src: atemporal,
-      hasLink: true,
-      desc: "Mobile application for Android developed for event management in Atemporal.",
-      link: "https://github.com/ATG-5222/AppAtemporal/tree/develop",
-      contri: "I contributed mostly to the development of the Backend, focusing together with my team on generating a metrics module to have the necessary information to make the best possible decisions."
+      src: imimex,
+      hasLink: false,
+      desc: "Design of a standardized local area network (LAN) and a wide area network (WAN) to connect multiple sites.",
+      contri: "I contributed to the research and design of a standardized LAN and WAN proposal to solve the client's connectivity needs considering aspects of security, availability and a possible expansion to a hybrid cloud."
     },
     {
       id: 5,
