@@ -40,7 +40,18 @@ const SocialLinks = () => {
           Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/cv_es.pdf",
+      href: "/AldoTenaGarcíaResume.pdf",
+      style: "rounded-br-md",
+      download: true,
+    },
+    {
+      id: 5,
+      child: (
+        <>
+          Curriculum Vitae <BsFillPersonLinesFill size={30} />
+        </>
+      ),
+      href: "/AldoTenaGarcíaCV.pdf",
       style: "rounded-br-md",
       download: true,
     },
